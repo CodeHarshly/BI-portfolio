@@ -20,17 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
-
-
-
-
-
-
 function enabledarkMode() {
   var mode = document.getElementById("mode");
   document.body.classList.add("dark-mode");
-  localStorage.setItem("lightMode", "1");
+  localStorage.setItem("darkMode", "1");
   mode.classList.remove('fa-sun');
   mode.classList.add('fa-moon');
   mode.style.animation = "slidemenu 500ms ease forwards";
@@ -42,7 +35,7 @@ function enabledarkMode() {
 function disabledarkMode() {
   var mode = document.getElementById("mode");
   document.body.classList.remove("dark-mode");
-  localStorage.setItem("lightMode", "0");
+  localStorage.setItem("darkMode", "0");
   mode.classList.remove('fa-moon');
   mode.classList.add('fa-sun');
   mode.style.animation = "slidemenu 500ms ease forwards";

@@ -73,7 +73,7 @@ body{
     color: var(--text-color); 
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
     opacity: 0;
-    animation: slidehead 1s ease forwards; /*1*/
+    animation: slidehead 1s ease forwards; 
     animation-delay: calc(.2s * var(--i));
     display: none;
 }
@@ -85,7 +85,7 @@ body{
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
     transition: .3s;
     opacity: 0;
-    animation: slidehead 1s ease forwards; /*1*/
+    animation: slidehead 1s ease forwards; 
     animation-delay: calc(.2s * var(--i));
     display: none;
 }
@@ -109,7 +109,7 @@ body{
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
     transition: .3s;
     opacity: 0;
-    animation: slidemenu 1s ease forwards; /*3*/
+    animation: slidemenu 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
 .navbar a:hover,
@@ -173,14 +173,21 @@ body{
 }
 #buttons>#b2{
     margin: 1.3rem 0 0 0;
-    background-color: var(--special-color);
+    background-color: white;
     font-size: 1.3rem;
+    color: var(--btn-txt);
+    cursor: pointer;
+}
+#buttons>#b2:hover{
+    background-color: var(--special-color);
+}
+#buttons>#b2:hover a{
     color: var(--btn-txt);
 }
 #buttons>button>a{
     text-decoration: none;
     font-size: 1.3rem;
-    color: var(--btn-txt);
+    color: black;
 }
 /*******************SKILLS****************************/
 
@@ -249,7 +256,7 @@ body{
     width: 100%;
     height: 5px;
     background-color: var(--color-bg);
-    animation: animate 1s cubic-bezier(1,0,0,1) forwards; /*4*/
+    animation: animate 1s cubic-bezier(1,0,0,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -258,7 +265,7 @@ body{
     background-color: var(--special-color);
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,1) forwards; /*4*/
+    animation: animate 1s 1s cubic-bezier(1,0,0,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -296,7 +303,7 @@ body{
     border-radius: 3px;
     top:-28px;
     right:-20px;
-    animation: showtext 0.5s 1.5s linear forwards; /*5*/
+    animation: showtext 0.5s 1.5s linear forwards;
     opacity:0;
 }
 .progress-line.html span::after{
@@ -334,7 +341,7 @@ body{
     border-top-color: var(--color-bg);
     top: -10px;
     right:0;
-    animation: showtext 0.5s 1.5s linear forwards; /*5*/
+    animation: showtext 0.5s 1.5s linear forwards;
     opacity: 0;
 }
 .technical-bars .skill-icon{
@@ -342,6 +349,7 @@ body{
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
+    cursor: pointer;
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 .technical-bars .skill-icon i:nth-child(1){
@@ -449,6 +457,7 @@ body{
 }
 #skill button:hover,
 #skill button.active {
+    cursor: pointer;
     background-color: var(--special-color); 
     color: white;
 }
@@ -475,6 +484,7 @@ body{
     overflow-y: hidden;
     overflow-x: scroll;
     width: 70%;
+    padding: 0 1rem 1rem 0;
 }
 .P-container::-webkit-scrollbar{
     display: none;
@@ -497,7 +507,7 @@ body{
  
  .project-box img{
     width: 100%;
-    height: 14rem;
+    height: 13rem;
     transition: .5s ease;
  }
  
@@ -596,7 +606,7 @@ body{
 
 /********************** Animation **********************/
 
-@keyframes slidehead { /*1*/
+@keyframes slidehead { /*header left*/
     0%{
       transform: translate(0,0);
       opacity: 0;
@@ -606,7 +616,7 @@ body{
       opacity: 1;
     }
 }
-@keyframes slidemenu {    /*3*/
+@keyframes slidemenu {    /*NAv menu*/
     0%{
       transform: translateY(-100px);
       opacity: 0;
@@ -616,7 +626,7 @@ body{
       opacity: 1;
     }
 }
-@keyframes animate{ /*4*/
+@keyframes animate{ /*TECH skill*/
     100%{
       transform: scaleX(1);
   
@@ -627,28 +637,28 @@ body{
       opacity: 1;
     }
 }
-@keyframes animate-bar { /*6*/
+@keyframes animate-bar { /*pro skill*/
     100% {
       stroke-dashoffset: -1;
     }
 } 
 
-@keyframes animate-path1 {
+@keyframes animate-path1 { /*Creativity*/
     100% {
         stroke-dashoffset: 50;
     }
 }
-@keyframes animate-path2 {
+@keyframes animate-path2 { /*teamwork*/
     100% {
         stroke-dashoffset: 75;
     }
 }
-@keyframes animate-path3 {
+@keyframes animate-path3 { /*communication*/
     100% {
         stroke-dashoffset: 150;
     }
 }
-@keyframes animate-path4 {
+@keyframes animate-path4 { /*problem solving*/
     100% {
         stroke-dashoffset: 100;
     }

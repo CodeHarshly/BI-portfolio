@@ -101,6 +101,53 @@ buttons.forEach(button => {
     });
 });
 
+/***********************pre loader***********************/
+const ImgPaths = [
+    'images/harshpp.png',
+    'images/harsh3.png',
+    'images/WebBingo.png',
+    'images/MathTricks.png',
+    'images/windowBingo.png',
+    'images/NetflixClone.png',
+    'images/weather.png',
+    'images/socialMedia.png',
+    'images/web.jpg',
+    'images/gam1.jpg',
+    'images/mail.png',
+    'images/github.png',
+    'images/link.png',
+    'images/insta.png'
+];
+
+
+function preloadImg(ImgPaths, callback) {
+    let loadImg = 0;
+
+    for (const ImgPath of ImgPaths) {
+        const img = new Image();
+        img.src = ImgPath;
+
+        console.log("load3");
+        img.onload = function() {
+            loadImg++;
+            if (loadImg === ImgPaths.length) {
+                callback();
+            }
+        };
+    }
+}
+
+function handleImgLoad() {
+    console.log("load2");
+    document.body.classList.add("loaded");
+}
+
+
+window.onload = function() {
+    console.log("load");
+    preloadImg(ImgPaths, handleImgLoad);
+};
+
 
 
 
