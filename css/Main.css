@@ -15,11 +15,19 @@
     --special-color: hsl(252, 75%, 60%);
     --header-bg: #fff;
     --font-shadow:#666666;
-    --text-color: black;
+    --text-dark-color: black;
     --color-danger: hsl(0, 95%, 60%);
     --color-bg: hsl(251, 89%, 93%);
     --color-bg2: hsl(252, 100%, 96%);
     --btn-txt: wheat;
+}
+.dark-mode{
+    --header-bg: #212121;
+    --font-shadow:#0000006c;
+    --text-color: white;
+    --special-color: hsl(0, 95%, 60%);
+    --color-bg: #272727;
+    --color-bg2: #383838;
 }
 html,body{
     height: 100%;
@@ -44,6 +52,12 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 99; 
+}
+#mode{
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
 }
 .head-left{
     display: flex;
@@ -132,24 +146,24 @@ body{
     position: relative;
     width: 40%;
     scale: 1.1;
+    color: var(--text-color);
     filter: drop-shadow(5px 5px 5px var(--font-shadow));
 }
 #text>h1{
     font-size: 2.6rem;
     line-height: 1;
-    margin-top: 1.3rem;
+    margin-top: 1.2rem;
 }
 #text>h4{
     margin-top: 2rem;
-    color: #2b2b2b;
     font-size: 1.1rem;
     font-weight: 500;
 }
-/*#text>h5{
-    color: #8873EF;
-    transform: rotate(-20deg);
+/*#text>h2{
+    color: var(--special-color);
+    transform: rotate(-30deg);
     position: absolute;
-    left: 3%;
+    left: -5%;
 }*/
 #buttons>button{
     padding: .65rem 1.4rem;
@@ -159,7 +173,7 @@ body{
 }
 #buttons>#b2{
     margin: 1.3rem 0 0 0;
-    background-color: black;
+    background-color: var(--special-color);
     font-size: 1.3rem;
     color: var(--btn-txt);
 }
@@ -183,6 +197,7 @@ body{
     position: absolute;
     top: 10%;
     left: 50%;
+    color: var(--text-color);
     transform: translateX(-50%);
     font-size:2.8rem;
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
@@ -194,6 +209,7 @@ body{
     font-size: 1.2rem;
     width: 40%;
     margin: auto 4rem;
+    color: var(--text-color);
     filter: drop-shadow(5px 5px 5px var(--font-shadow));
 }
 #skill #right{
@@ -211,6 +227,7 @@ body{
 }
 .box>h2{
     margin-bottom: 3rem;
+    color: var(--text-color);
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 /******************TECH SKILL*********************/
@@ -457,7 +474,7 @@ body{
 .P-container{
     overflow-y: hidden;
     overflow-x: scroll;
-    width: 80%;
+    width: 70%;
 }
 .P-container::-webkit-scrollbar{
     display: none;
@@ -543,15 +560,17 @@ body{
     font-size: 3.2rem;
     margin: 5rem 0;
     font-weight: 600;
+    color: var(--text-color);
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 .contact-me .collab{
-    margin: 12rem 0;
+    margin: 12rem 2rem;
     font-family: 'Montserrat',sans-serif;
 }
 .contact-me p{
     margin: 1rem 0;
     font-size: 2.4rem;
+    color: var(--text-color);
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 .contact-me span{
@@ -561,6 +580,7 @@ body{
     color: black;
     font-size: 1.2rem;
     margin: 1rem 0;
+    color: var(--text-color);
     filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 .contact-me a{
@@ -569,6 +589,7 @@ body{
 .btn>img{
     width: 3rem;
     border-radius: 50%;
+    background-color: white;
     filter: drop-shadow(3px 3px 5px var(--font-shadow));
 }
 
@@ -638,6 +659,12 @@ body{
     html{
         font-size: 90%;
     }
+    .header>i{
+        right: 1rem;
+    }
+    .header-image{
+        width: 6vw;
+    }
     #home{
         flex-direction: column;
         padding: 6rem 0;
@@ -675,8 +702,16 @@ body{
     
 }
 @media (max-width:768px){
+    .header-image{
+        width: 8vw;
+    }
+    #mode{
+        right: 6rem;
+        font-size: 1.4rem;
+    }
     #menu-icon {
       display: block;
+      font-size: 1.8rem;
     }
     .navbar {
       position:absolute;
@@ -695,7 +730,7 @@ body{
     }
     .navbar a {
       display: block;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin: 3rem 0;
     }
     .P-content {
@@ -707,6 +742,22 @@ body{
 @media (max-width:550px) {
     html{
         font-size: 80%;
+    }
+    #mode{
+        right: 5rem;
+        font-size: 1.4rem;
+    }
+    .head-left h2{
+        font-size: 1.6rem;
+    }
+    #menu-icon {
+        font-size: 2rem;
+    }
+    .navbar a {
+        font-size: 1.6rem;
+    }
+    .header-image{
+        width: 12vw;
     }
     .P-content {
         padding: 3rem 0;
