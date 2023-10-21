@@ -113,10 +113,6 @@ const ImgPaths = [
     'images/socialMedia.png',
     'images/web.jpg',
     'images/game1.jpg',
-    'images/mail.png',
-    'images/github.png',
-    'images/link.png',
-    'images/insta.png'
 ];
 
 
