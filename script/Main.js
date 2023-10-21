@@ -112,7 +112,7 @@ const ImgPaths = [
     'images/weather.png',
     'images/socialMedia.png',
     'images/web.jpg',
-    'images/gam1.jpg',
+    'images/game1.jpg',
     'images/mail.png',
     'images/github.png',
     'images/link.png',
