@@ -805,6 +805,6 @@ body.loaded .preloader {
         width: 180%;
     }
     .projects-box img{
-        height: 12rem;
+        height: auto;
      }
 }
