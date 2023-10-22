@@ -804,7 +804,7 @@ body.loaded .preloader {
         grid-template-columns: repeat(2, 1fr);
         width: 180%;
     }
-    .projects-box img{
-        height: auto;
-     }
+    .project-box>img{
+        height: 12rem;
+    }
 }
