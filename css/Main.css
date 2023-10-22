@@ -802,9 +802,9 @@ body.loaded .preloader {
     .P-content {
         padding: 3rem 0;
         grid-template-columns: repeat(2, 1fr);
-        width: 180%;
+        width: 185%;
     }
     .project-box>img{
-        height: 12rem;
+        height: 12.5rem;
     }
 }
