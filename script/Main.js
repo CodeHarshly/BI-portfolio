@@ -18,7 +18,7 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
+    menuIcon.classList.toggle('fa-x');
     navbar.classList.toggle('active');
 };
 
@@ -42,7 +42,7 @@ window.onscroll= () => {
     });
     
     //remove toogle menu option
-    menuIcon.classList.remove('bx-x');
+    menuIcon.classList.remove('fa-x');
     navbar.classList.remove('active');
 };
 

@@ -751,7 +751,7 @@ body.loaded .preloader {
     }
     #menu-icon {
       display: block;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
     .navbar {
       position:absolute;
@@ -791,7 +791,7 @@ body.loaded .preloader {
         font-size: 1.6rem;
     }
     #menu-icon {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .navbar a {
         font-size: 1.6rem;
