@@ -759,7 +759,7 @@ body.loaded .preloader {
       left: 0;
       width: 100%;
       padding: 1rem 3%;
-      background-color: var(--header-bg);
+      background-color: var(--color-bg2);
       border-top: .1rem solid rgba(0, 0, 0, .2);
       box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
       display: none;
@@ -802,7 +802,7 @@ body.loaded .preloader {
     .P-content {
         padding: 3rem 0;
         grid-template-columns: repeat(2, 1fr);
-        width: 170%;
+        width: 180%;
     }
     .projects-box img{
         height: 14rem;
